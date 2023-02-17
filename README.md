@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Fully responsive personal portfolio website built from scratch iplimenting
+Fully responsive personal portfolio website built from scratch implimenting
  * react icons librarary 
  * useState hooks
  * modern website designs with CSS3
