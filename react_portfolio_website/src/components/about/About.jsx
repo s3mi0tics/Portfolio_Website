@@ -40,13 +40,13 @@ const About = () => {
                 <small>Recent Work</small>
               </article>
 
+            </div>
+
               <p>
               I am a Dedicated full-stack developer on a journey to help improve the world through code. Focused on creating quality systems by using good habits and processes. Proficient in Python, Java, React, mySQL, and mongoDB. Gritty and diligent engineer focused on growth, with a  willingness to learn and a curiosity to gain a deeper understanding of coding. Skilled problem solver able to self-manage during independent projects and collaborate in a team setting. 
               </p>
 
               <a href='#contact' className='btn btn-primary'>Let's Talk</a>
-
-            </div>
 
         </div>
       </div>
