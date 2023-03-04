@@ -1,6 +1,8 @@
 import React from 'react'
 import './portfolio.css'
-import IMG1 from '../../assets/MERN_NETFLIX_CLONE_SCREENSHOT.png'
+import data from "../../data/data.js"
+// import IMG1 from "../../assets/netflix_screenshot.png"
+
 
 const Portfolio = () => {
   return (
@@ -9,66 +11,22 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
 
       <div className="container portfolio_container">
-        <article className="portfolio_item">
-          <div className="portfolio_item-image">
-            <img src={IMG1} alt='Netflix Clone' />
-          </div>
-          <h3>MERN Netflix Clone</h3>
-          <div className='portfolio_item-cta'>
-            <a href="https://github.com/s3mi0tics/MERN-NETFLIX-CLONE" className="btn" target='_blank' rel="noreferrer">Github</a>
-            <a href="https://dribble.com/Alien_pixels" className="btn btn-primary" target='_blank' rel="noreferrer">Live Demo</a>
-          </div>
-        </article>
-        <article className="portfolio_item">
-          <div className="portfolio_item-image">
-            <img src={IMG1} alt='Netflix Clone' />
-          </div>
-          <h3>MERN Netflix Clone</h3>
-          <div className='portfolio_item-cta'>
-            <a href="https://github.com/s3mi0tics/MERN-NETFLIX-CLONE" className="btn" target='_blank' rel="noreferrer">Github</a>
-            <a href="https://dribble.com/Alien_pixels" className="btn btn-primary" target='_blank' rel="noreferrer">Live Demo</a>
-          </div>
-        </article>
-        <article className="portfolio_item">
-          <div className="portfolio_item-image">
-            <img src={IMG1} alt='Netflix Clone' />
-          </div>
-          <h3>MERN Netflix Clone</h3>
-          <div className='portfolio_item-cta'>
-            <a href="https://github.com/s3mi0tics/MERN-NETFLIX-CLONE" className="btn" target='_blank' rel="noreferrer">Github</a>
-            <a href="https://dribble.com/Alien_pixels" className="btn btn-primary" target='_blank' rel="noreferrer">Live Demo</a>
-          </div>
-                  </article>
-        <article className="portfolio_item">
-          <div className="portfolio_item-image">
-            <img src={IMG1} alt='Netflix Clone' />
-          </div>
-          <h3>MERN Netflix Clone</h3>
-          <div className='portfolio_item-cta'>
-            <a href="https://github.com/s3mi0tics/MERN-NETFLIX-CLONE" className="btn" target='_blank' rel="noreferrer">Github</a>
-            <a href="https://dribble.com/Alien_pixels" className="btn btn-primary" target='_blank' rel="noreferrer">Live Demo</a>
-          </div>
-        </article>
-        <article className="portfolio_item">
-          <div className="portfolio_item-image">
-            <img src={IMG1} alt='Netflix Clone' />
-          </div>
-          <h3>MERN Netflix Clone</h3>
-          <div className='portfolio_item-cta'>
-            <a href="https://github.com/s3mi0tics/MERN-NETFLIX-CLONE" className="btn" target='_blank' rel="noreferrer">Github</a>
-            <a href="https://dribble.com/Alien_pixels" className="btn btn-primary" target='_blank' rel="noreferrer">Live Demo</a>
-          </div>
-        </article>
-        <article className="portfolio_item">
-          <div className="portfolio_item-image">
-            <img src={IMG1} alt='Netflix Clone' />
-          </div>
-          <h3>MERN Netflix Clone</h3>
-          <div className='portfolio_item-cta'>
-            <a href="https://github.com/s3mi0tics/MERN-NETFLIX-CLONE" className="btn" target='_blank' rel="noreferrer">Github</a>
-            <a href="https://dribble.com/Alien_pixels" className="btn btn-primary" target='_blank' rel="noreferrer">Live Demo</a>
-          </div>
-        </article>
+        {
+          data.projects.map(({id, image, title, github, website}) => {
+            return (
+              <article key={id} className="portfolio_item">
+                <div className="portfolio_item-image">
+                <img src={image} alt={title} />
+                </div>
+                <h3>{title}</h3>
+                <div className='portfolio_item-cta'>
+                  {github ? <a href={github} className="btn" target='_blank' rel="noreferrer">Github</a> : null}
+                  {website ? <a href={website} className="btn btn-primary" target='_blank' rel="noreferrer">Website</a> : null}
+                </div>
+              </article>
+            )
+          })
+        }
       </div>
     </section>
   )
