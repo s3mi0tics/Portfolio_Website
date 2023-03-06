@@ -17,19 +17,19 @@ const contact = () => {
       {/* Contact Options */}
         <div className="contact_options">
           <article className="contact_option">
-            <MdOutlineEmail />
+            <MdOutlineEmail className='contact_option-icon' />
             <h4>Email</h4>
             <h5>colby.kauk@gmail.com</h5>
             <a href={`mailto:${EMAIL}`} target='_blank' rel="noreferrer">Email Me</a>
           </article>
           <article className="contact_option">
-            <AiOutlineLinkedin />
+            <AiOutlineLinkedin className='contact_option-icon' />
             <h4>LinkedIn</h4>
             <h5>Colby Kauk</h5>
             <a href={ LINKEDIN } target='_blank' rel="noreferrer">Profile</a>
           </article>
           <article className="contact_option">
-            <BsWhatsapp />
+            <BsWhatsapp className='contact_option-icon' />
             <h4>WhatsApp</h4>
             <h5>Colby Kauk</h5>
             <a href={ WHATSAPP } target='_blank' rel="noreferrer">Send A Message</a>
