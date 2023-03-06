@@ -1,7 +1,7 @@
 import React from 'react'
 import './portfolio.css'
 import data from "../../data/data.js"
-// import IMG1 from "../../assets/netflix_screenshot.png"
+
 
 
 const Portfolio = () => {
